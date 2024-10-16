@@ -1,3 +1,4 @@
+pytz
 gunicorn==20.1.0
 python-dotenv
 Flask==2.2.3
