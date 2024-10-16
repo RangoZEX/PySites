@@ -26,10 +26,12 @@ HTML_TEMPLATE = '''
             position: relative;
             overflow: hidden;
             font-family: 'Roboto Mono', monospace; /* Default font for body */
+            background: linear-gradient(135deg, #1e3c72, #2a69ac); /* Gradient background */
+            color: #fff; /* White text color */
         }
         h1 {
             font-size: 48px;
-            color: #fff;
+            color: #00ff00; /* Green text for the welcome message */
             opacity: 0;
             animation: slideIn 1s forwards 0.5s;
             cursor: pointer;
@@ -38,7 +40,7 @@ HTML_TEMPLATE = '''
         .datetime-box {
             margin-top: 20px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better visibility */
             border: 2px solid #fff;
             border-radius: 10px;
             color: #00ff00; /* Green color for digital clock */
