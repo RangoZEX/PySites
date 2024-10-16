@@ -15,6 +15,7 @@ HTML_TEMPLATE = '''
     <link rel="stylesheet" href="{{ url_for('main.static', filename='styles.css') }}">
 </head>
 <body>
+    <div class="background"></div> <!-- Sci-fi animated background -->
     <div class="door"></div>
     <div class="welcome" id="welcomeMessage">
         <h1>Welcome to My Site!</h1>
@@ -40,3 +41,4 @@ HTML_TEMPLATE = '''
 @main.route('/')
 def home():
     return render_template_string(HTML_TEMPLATE)
+    
