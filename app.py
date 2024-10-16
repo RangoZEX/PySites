@@ -1,9 +1,13 @@
 from flask import Flask
+from dotenv import load_dotenv
 import os
+
+# Load environment variables from config.env (if exists)
+load_dotenv('config.env')
 
 app = Flask(__name__)
 
-# Access the BASE_URL from Heroku's environment variables
+# Get the BASE_URL from either config.env or Heroku environment variables
 BASE_URL = os.getenv('BASE_URL')
 
 @app.route('/')
