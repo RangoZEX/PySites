@@ -1,1 +1,34 @@
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables file
+config.env
+.env
+
+# Virtual environment directory
+venv/
+env/
+*.egg-info/
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# MacOS files
+.DS_Store
+
+# Log files
+*.log
+
+# SQLite database (if using a local SQLite database for development)
+*.sqlite3
+
+# Heroku configuration files (optional)
+*.local
+.heroku/
+
+# PyCharm and VSCode settings (optional)
+*.iml
 
