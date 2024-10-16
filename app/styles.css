@@ -1,10 +1,26 @@
 /* app/styles.css */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
     color: #fff;
     text-align: center;
     overflow: hidden; /* Prevent scrollbars during animation */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Position relative for the background */
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, rgba(0,0,0,0.8) 80%);
+    overflow: hidden;
+    animation: stars 15s linear infinite; /* Animation for stars */
+    z-index: 0; /* Behind other elements */
+}
+
+@keyframes stars {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
 }
 
 .door {
@@ -27,7 +43,7 @@ body {
 
 .welcome {
     position: relative;
-    z-index: 0; /* Behind the door */
+    z-index: 1; /* Above the background */
     opacity: 0; /* Hidden initially */
     transition: opacity 1s ease-in 3s; /* Fade in after door opens */
 }
