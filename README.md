@@ -42,3 +42,20 @@ graph TD;
     E[Backend] -->|uses| F[Flask];
     G[Database] -->|uses| H[SQLite];
     I[Hosting] -->|uses| J[Heroku];
+
+
+
+👲 <b>DEVLOPER</b>
+
+<p align="middle">
+<img src="https://graph.org/file/054e6d138f03ef0927645.jpg" width="150" height="150"><br>
+<img src="https://badgen.net/badge/Name/RangoZex/FF33FF?icon=awesome&labelColor=0080FF"></a>
+<img src="https://badgen.net/badge/Skills/python/purple?icon=terminal&labelColor=red"></a>
+<a href="https://telegram.dog/RangoZex"><img src="https://img.shields.io/badge/Telegram-Bot-blue.svg?logo=telegram"></a>
+<a href="https://github.com/RangoZex"><img src="https://badgen.net/badge/Follow%20on%20/GitHub/80FF00?icon=github&labelColor=black"></a>
+<a href="https://youtu.be/TbMX6aN3GgY"><img src="https://img.shields.io/badge/YouTube-Channel-FF3333.svg?logo=youtube&logoColor=FF3333"></a>
+<p align="left">
+</p>
+
+
+######## THANK YOU ########
