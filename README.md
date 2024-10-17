@@ -4,8 +4,9 @@ A simple and stylish animated website built with Flask. This project serves as t
 
 <b>Installation & Setup</b>
 
-- To run PySites locally, follow these steps:
+To run PySites locally, follow these steps:
 
-  1) Clone the repository:
-```git clone https://github.com/yourusername/PySites.git
+- Clone the repository:
+```git clone https://github.com/yourusername/PySites
+git
 cd PySites```
