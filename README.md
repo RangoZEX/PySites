@@ -10,7 +10,6 @@
 _To run **PySites** locally, follow these steps:_
 
 ### 1. **Clone the repository:**
-
 `git clone https://github.com/RangoZex/PySites.git
 cd PySites
 
@@ -19,10 +18,9 @@ cd PySites
 `pip install -r requirements.txt
 
 ### 3. **Configure environment variables:**
-
 > Create a .env file in the root directory with the following content:
 
 `BASE_URL=your-heroku-app-url
 
 ### 4. **Run the application:**
-```python app.py
+`python app.py
