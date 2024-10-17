@@ -32,18 +32,6 @@ cd PySites`
 
 
 
-## **🛠️ Tech Stack**
-
-```mermaid
-graph TD;
-    A[Frontend] -->|uses| B[HTML];
-    A -->|uses| C[CSS];
-    A -->|uses| D[JavaScript];
-    E[Backend] -->|uses| F[Flask];
-    G[Database] -->|uses| H[SQLite];
-    I[Hosting] -->|uses| J[Heroku];
-
-
 
 👲 <b>DEVLOPER</b>
 
@@ -58,4 +46,14 @@ graph TD;
 </p>
 
 
-######## THANK YOU ########
+## **🛠️ Tech Stack**
+
+```mermaid
+graph TD;
+    A[Frontend] -->|uses| B[HTML];
+    A -->|uses| C[CSS];
+    A -->|uses| D[JavaScript];
+    E[Backend] -->|uses| F[Flask];
+    G[Database] -->|uses| H[SQLite];
+    I[Hosting] -->|uses| J[Heroku];
+
