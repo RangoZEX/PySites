@@ -11,13 +11,9 @@ _To run **PySites** locally, follow these steps:_
 
 ### 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/RangoZex/PySites.git
+```git clone https://github.com/RangoZex/PySites.git
 cd PySites
 
-
-
-hey
 
 ### 2. **Install dependencies:**
 
