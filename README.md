@@ -29,8 +29,11 @@ cd PySites`
 
 ## **🛠️ Tech Stack**
 
-- **Backend**: Flask (Python)
-- **Frontend**: HTML, CSS, JavaScript
-- **Database**: SQLite (or any database you are using)
-- **Hosting**: Heroku
-- **Version Control**: Git
+```mermaid
+graph TD;
+    A[Frontend] -->|uses| B[HTML];
+    A -->|uses| C[CSS];
+    A -->|uses| D[JavaScript];
+    E[Backend] -->|uses| F[Flask];
+    G[Database] -->|uses| H[SQLite];
+    I[Hosting] -->|uses| J[Heroku];
