@@ -60,10 +60,29 @@
             background: rgba(255, 255, 255, 0.2); /* Transparent background */
             color: #fff;
             font-size: 20px;
+            font-weight: bold;  /* Bold text */
             border: 2px solid #00ff00;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.3s ease;
+            opacity: 0;  /* Initially hidden for animation */
+            transform: translateX(-100%);  /* Start off-screen */
+        }
+
+        /* Animation for the Bot List */
+        .bot-item.show {
+            animation: slideIn 1s forwards;  /* Trigger animation when 'show' class is added */
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .bot-item:hover {
@@ -126,6 +145,18 @@
         <p>© 2024 AMC Developers - All Rights Reserved</p>
         <p><a href="https://t.me/amcdev">Telegram</a> | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
     </footer>
+
+    <script>
+        // Adding the 'show' class to bot items after page loads to trigger the animation
+        document.addEventListener("DOMContentLoaded", function() {
+            var botItems = document.querySelectorAll('.bot-item');
+            botItems.forEach(function(item, index) {
+                setTimeout(function() {
+                    item.classList.add('show');  // Add the 'show' class with a delay for each item
+                }, index * 200);  // Delay each bot item slightly
+            });
+        });
+    </script>
 
 </body>
 </html>
