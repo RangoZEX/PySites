@@ -90,7 +90,7 @@ HTML_TEMPLATE = '''
 </head>
 <body>
     <div class="rain" id="rain"></div> <!-- Rain container -->
-    <h1 id="welcomeText" onclick="redirectToTelegram()">WELCOME TO AMC DEV</h1>
+    <h1 id="welcomeText" onclick="redirectToTelegram()">WELCOME TO\nAMC DEV</h1>
     <div class="datetime-box" id="datetimeBox">
         <div id="currentDate"></div>
         <div id="currentTime"></div>
@@ -98,7 +98,7 @@ HTML_TEMPLATE = '''
 
     <script>
         function redirectToTelegram() {
-            window.location.href = "https://t.me/amcdevs"; // Redirects to Telegram
+            window.location.href = "https://t.me/amcdev"; // Redirects to Telegram
         }
 
         function updateDateTime() {
