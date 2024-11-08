@@ -40,27 +40,46 @@
         .hero .cta { margin-top: 20px; padding: 10px 20px; background: #00ff00; color: #1e3c72; border: none; cursor: pointer; z-index: 2; }
         .hero .cta:hover { background: #1e3c72; color: #00ff00; transition: all 0.3s ease; z-index: 2; }
 
-        /* Fade-in animation */
-        .fade-in { animation: fadeIn 2s ease-in; }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Section Styles */
-        .services, .about, .portfolio, .contact {
+        /* Bot List Section */
+        .bot-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 50px 20px;
-            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
         }
 
-        .services { background: #1b2845; }
-        .about { background: #12233d; color: #fff; }
-        .portfolio { background: #1b2845; }
-        .contact { background: #0d1b2a; color: #fff; }
+        .bot-item {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 10px 0;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2); /* Transparent background */
+            color: #fff;
+            font-size: 20px;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
 
-        .services h2, .about h2, .portfolio h2 { font-size: 36px; margin-bottom: 30px; }
-        .service-item, .portfolio-item { display: inline-block; width: 250px; margin: 20px; text-align: center; }
-        .service-icon, .portfolio-icon { font-size: 50px; color: #00ff00; margin-bottom: 10px; }
+        .bot-item:hover {
+            background: rgba(0, 255, 0, 0.3);
+            border-color: #fff;
+        }
+
+        /* About Us Section */
+        .about {
+            padding: 50px 20px;
+            background: #12233d;
+            color: #fff;
+        }
+
+        .about h2 { font-size: 36px; margin-bottom: 20px; }
+        .about p { max-width: 700px; margin: auto; }
 
         /* Footer */
         .footer {
@@ -79,51 +98,27 @@
     </div>
 
     <!-- Bot List Section -->
-    <section id="bot-list" class="services">
+    <section id="bot-list" class="bot-list">
         <h2>Our Telegram Bots</h2>
-        <div class="service-item">
-            <div class="service-icon">🤖</div>
-            <h3>@UploadXPro_Bot</h3>
-        </div>
-        <div class="service-item">
-            <div class="service-icon">🤖</div>
-            <h3>@AmcGdriveBot</h3>
-        </div>
-        <div class="service-item">
-            <div class="service-icon">🤖</div>
-            <h3>@Files2LinkProBot</h3>
-        </div>
-        <!-- Add other bots here -->
+        <a href="https://t.me/UploadXPro_Bot" class="bot-item">UploadXPro_Bot</a>
+        <a href="https://t.me/AmcGdriveBot" class="bot-item">AmcGdriveBot</a>
+        <a href="https://t.me/Files2LinkProBot" class="bot-item">Files2LinkProBot</a>
+        <a href="https://t.me/ExtractPro_Bot" class="bot-item">ExtractPro_Bot</a>
+        <a href="https://t.me/MaxxFiles2LinkBot" class="bot-item">MaxxFiles2LinkBot</a>
+        <a href="https://t.me/HerokuProBot" class="bot-item">HerokuProBot</a>
+        <a href="https://t.me/YouTubeV2Bot" class="bot-item">YouTubeV2Bot</a>
+        <a href="https://t.me/MaxxMergerBot" class="bot-item">MaxxMergerBot</a>
+        <a href="https://t.me/MaxxTrimmerBot" class="bot-item">MaxxTrimmerBot</a>
+        <a href="https://t.me/SeedrProBot" class="bot-item">SeedrProBot</a>
+        <a href="https://t.me/JioSaavn_Bot" class="bot-item">JioSaavn_Bot</a>
+        <a href="https://t.me/AmcForwardBot" class="bot-item">AmcForwardBot</a>
+        <a href="https://t.me/FilesSearchBot" class="bot-item">FilesSearchBot</a>
     </section>
 
     <!-- About Us Section -->
     <section class="about">
         <h2>About Us</h2>
         <p>AMC Developers is dedicated to creating efficient, innovative solutions tailored to each client’s unique needs. Our team of skilled developers and designers is committed to delivering excellence through every line of code and creative element.</p>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio">
-        <h2>Our Projects</h2>
-        <div class="portfolio-item">
-            <h3>Project 1</h3>
-            <p>A brief description of Project 1 and its success story.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 2</h3>
-            <p>A brief description of Project 2 and its success story.</p>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 3</h3>
-            <p>A brief description of Project 3 and its success story.</p>
-        </div>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Have any questions or want to collaborate? Get in touch with us!</p>
-        <p>Email: <a href="mailto:contact@amcdevelopers.com">contact@amcdevelopers.com</a></p>
     </section>
 
     <!-- Footer -->
