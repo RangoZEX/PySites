@@ -1,10 +1,8 @@
+# app/__init__.py
 from flask import Flask
+from .routes import main
 
 def create_app():
     app = Flask(__name__)
-
-    # Import routes from the routes module
-    from .routes import home_route
-    app.register_blueprint(home_route)
-
+    app.register_blueprint(main)
     return app
