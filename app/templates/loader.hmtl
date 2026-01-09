@@ -1,0 +1,14 @@
+<div id="ai-loader">
+    <div class="grid"></div>
+
+    <div class="loader-content">
+        <h1 class="ai-title">AMC AI CORE</h1>
+        <p class="ai-sub">Initializing Telegram Automation Modules</p>
+
+        <div class="progress">
+            <span></span>
+        </div>
+
+        <p class="status">Boot Sequence Started…</p>
+    </div>
+</div>
