@@ -1,146 +1,40 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>AMC Developers - Telegram Bots</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto Mono', monospace; overflow-x: hidden; background: url('https://i.ibb.co/zF1JHQ4/IMG-20241108-WA0077.jpg') no-repeat center center fixed; background-size: cover; color: #fff; }
+{% extends "base.html" %}
 
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.8);
-            position: fixed;
-            top: 0;
-            left: -250px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            padding-top: 60px;
-        }
-        .sidebar a {
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #00ff00;
-            font-size: 18px;
-            display: block;
-            transition: 0.2s;
-        }
-        .sidebar a:hover {
-            background: #00ff00;
-            color: #000;
-        }
+{% block title %}AMC Developers - Telegram Bots{% endblock %}
 
-        /* Toggle Button */
-        .toggle-btn {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            font-size: 24px;
-            color: #00ff00;
-            cursor: pointer;
-        }
+{% block content %}
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
-            justify-content: center;
-        }
-        .hero h1 { font-family: 'Nova Square', cursive; font-size: 48px; color: #00ff00; }
-        .hero h2 { font-size: 24px; margin-top: 10px; color: #ffffff; }
+<!-- Sidebar Toggle -->
+<div class="toggle-btn" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+</div>
 
-        /* Bot List */
-        .bot-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            padding: 20px;
-        }
-        .bot-box {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: #00ff00;
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer;
-            animation: slideIn 1.5s ease-in-out infinite alternate;
-        }
-        .bot-box:hover {
-            transform: translateX(10px);
-        }
-        @keyframes slideIn {
-            from { transform: translateX(-10px); }
-            to { transform: translateX(10px); }
-        }
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="#"><i class="fas fa-envelope"></i> Contact Us</a>
+    <a href="https://t.me/amcdev" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+    <a href="https://github.com/amcdev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+</div>
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .bot-list {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Sidebar Toggle Button -->
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-    </div>
+<!-- Hero -->
+<section class="hero fade-up">
+    <h1>AMC Developers</h1>
+    <h2>Creating Telegram Bots with Passion & Precision</h2>
+</section>
 
-    <!-- Sidebar -->
-    <div id="sidebar" class="sidebar">
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
-        <a href="https://t.me/amcdev" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-        <a href="https://github.com/amcdev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://youtube.com/amcdev" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-        <a href="https://twitter.com/amcdev" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-    </div>
+<!-- Bot List -->
+<section class="bot-list">
+    <a class="bot-box" href="https://t.me/UploadXPro_Bot" target="_blank">@UploadXPro_Bot</a>
+    <a class="bot-box" href="#">@AmcGdriveBot</a>
+    <a class="bot-box" href="#">@Files2LinkProBot</a>
+</section>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>AMC Developers</h1>
-        <h2>Creating Telegram Bots with Passion & Precision</h2>
-    </div>
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
 
-    <!-- Bot List Section -->
-    <section class="bot-list">
-        <a class="bot-box" href="https://t.me/UploadXPro_Bot" target="_blank">@UploadXPro_Bot</a>
-        <a class="bot-box" href="https://t.me/AmcGdriveBot" target="_blank">@AmcGdriveBot</a>
-        <a class="bot-box" href="https://t.me/Files2LinkProBot" target="_blank">@Files2LinkProBot</a>
-        <a class="bot-box" href="https://t.me/ExtractPro_Bot" target="_blank">@ExtractPro_Bot</a>
-        <a class="bot-box" href="https://t.me/MaxxFiles2LinkBot" target="_blank">@MaxxFiles2LinkBot</a>
-        <a class="bot-box" href="https://t.me/HerokuProBot" target="_blank">@HerokuProBot</a>
-        <a class="bot-box" href="https://t.me/YouTubeV2Bot" target="_blank">@YouTubeV2Bot</a>
-        <a class="bot-box" href="https://t.me/MaxxMergerBot" target="_blank">@MaxxMergerBot</a>
-        <a class="bot-box" href="https://t.me/MaxxTrimmerBot" target="_blank">@MaxxTrimmerBot</a>
-        <a class="bot-box" href="https://t.me/SeedrProBot" target="_blank">@SeedrProBot</a>
-        <a class="bot-box" href="https://t.me/JioSaavn_Bot" target="_blank">@JioSaavn_Bot</a>
-        <a class="bot-box" href="https://t.me/AmcForwardBot" target="_blank">@AmcForwardBot</a>
-        <a class="bot-box" href="https://t.me/FilesSearchBot" target="_blank">@FilesSearchBot</a>
-    </section>
-
-    <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            if (sidebar.style.left === "-250px") {
-                sidebar.style.left = "0";
-            } else {
-                sidebar.style.left = "-250px";
-            }
-        }
-    </script>
-</body>
-</html>
+{% endblock %}
