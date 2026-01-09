@@ -1,0 +1,74 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+}
+
+/* Background image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.ibb.co/zF1JHQ4/IMG-20241108-WA0077.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  z-index: -1;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  position: fixed;
+  left: -260px;
+  top: 0;
+  transition: transform 0.4s ease;
+  padding-top: 80px;
+}
+
+.sidebar.active {
+  transform: translateX(260px);
+}
+
+.sidebar a {
+  display: block;
+  padding: 16px 20px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Toggle */
+.toggle-btn, .theme-toggle {
+  position: fixed;
+  top: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.toggle-btn { left: 20px; }
+.theme-toggle { right: 20px; }
+
+/* Hero */
+.hero {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-family: 'Nova Square', cursive;
+  font-size: 52px;
+}
