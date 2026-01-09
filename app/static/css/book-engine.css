@@ -1,34 +1,122 @@
-/* BOOK CORE */
+/* =========================================================
+   BOOK ENGINE — 3D PAGE SYSTEM
+   ========================================================= */
+
+/* BOOK CONTAINER */
 #book {
-  width: 90vw;
-  height: 90vh;
-  perspective: 1600px;
+  width: 92vw;
+  height: 92vh;
   position: relative;
+  perspective: 1800px;
+  transform-style: preserve-3d;
 }
 
-/* PAGE */
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
 .page {
   position: absolute;
   inset: 0;
-  background: rgba(8,15,30,0.9);
-  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(12,20,45,0.96),
+    rgba(6,12,30,0.96)
+  );
+  border-radius: 18px;
+
   transform-origin: left center;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
+  /* CLOSED BY DEFAULT */
   transform: rotateY(-90deg);
-  transition: transform 1s cubic-bezier(.77,0,.18,1);
-  box-shadow: 0 40px 120px rgba(0,0,0,0.6);
+
+  transition:
+    transform 1.15s cubic-bezier(.77,0,.18,1),
+    box-shadow 1.15s cubic-bezier(.77,0,.18,1);
+  
+  box-shadow:
+    0 40px 120px rgba(0,0,0,0.65),
+    inset 0 0 0 1px rgba(0,255,136,0.12);
 }
 
-/* ACTIVE PAGE */
+/* =========================================================
+   ACTIVE PAGE (OPEN)
+   ========================================================= */
+
 .page.active {
   transform: rotateY(0deg);
+  box-shadow:
+    0 60px 160px rgba(0,0,0,0.75),
+    inset 0 0 0 1px rgba(0,255,136,0.25);
 }
 
-/* PAGE INNER */
+/* =========================================================
+   TURNED PAGE (BEHIND)
+   ========================================================= */
+
+.page.turned {
+  transform: rotateY(-180deg);
+  box-shadow:
+    0 20px 80px rgba(0,0,0,0.4);
+}
+
+/* =========================================================
+   PAGE DEPTH STACKING
+   ========================================================= */
+
+.page[data-page="0"] { z-index: 5; }
+.page[data-page="1"] { z-index: 4; }
+.page[data-page="2"] { z-index: 3; }
+.page[data-page="3"] { z-index: 2; }
+.page[data-page="4"] { z-index: 1; }
+
+/* =========================================================
+   PAGE INNER CONTENT
+   ========================================================= */
+
 .page-inner {
   width: 100%;
   height: 100%;
-  padding: 60px;
+  padding: 64px 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* =========================================================
+   EDGE GLOW (BOOK FEEL)
+   ========================================================= */
+
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0,255,136,0.45),
+    rgba(0,255,136,0.05)
+  );
+  opacity: 0.35;
+  border-radius: 18px 0 0 18px;
+  pointer-events: none;
+}
+
+/* =========================================================
+   MOBILE ADJUSTMENTS
+   ========================================================= */
+
+@media (max-width: 768px) {
+  #book {
+    width: 96vw;
+    height: 96vh;
+  }
+
+  .page-inner {
+    padding: 42px 32px;
+  }
 }
