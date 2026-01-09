@@ -1,0 +1,34 @@
+/* BOOK CORE */
+#book {
+  width: 90vw;
+  height: 90vh;
+  perspective: 1600px;
+  position: relative;
+}
+
+/* PAGE */
+.page {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,15,30,0.9);
+  border-radius: 16px;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  transition: transform 1s cubic-bezier(.77,0,.18,1);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.6);
+}
+
+/* ACTIVE PAGE */
+.page.active {
+  transform: rotateY(0deg);
+}
+
+/* PAGE INNER */
+.page-inner {
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
