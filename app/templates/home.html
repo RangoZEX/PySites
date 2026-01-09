@@ -1,40 +1,15 @@
 {% extends "base.html" %}
-
-{% block title %}AMC Developers - Telegram Bots{% endblock %}
+{% block title %}AI Portfolio{% endblock %}
 
 {% block content %}
+<section class="page page-home active">
+  <div class="page-inner">
+    <h1 class="ai-name">AMC</h1>
+    <p class="ai-role">Telegram Automation Engineer</p>
 
-<!-- Sidebar Toggle -->
-<div class="toggle-btn" onclick="toggleSidebar()">
-    <i class="fas fa-bars"></i>
-</div>
-
-<!-- Sidebar -->
-<div id="sidebar" class="sidebar">
-    <a href="#"><i class="fas fa-envelope"></i> Contact Us</a>
-    <a href="https://t.me/amcdev" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-    <a href="https://github.com/amcdev" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
-    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-</div>
-
-<!-- Hero -->
-<section class="hero fade-up">
-    <h1>AMC Developers</h1>
-    <h2>Creating Telegram Bots with Passion & Precision</h2>
+    <div class="ai-hint">
+      SYSTEM READY · TURN PAGE
+    </div>
+  </div>
 </section>
-
-<!-- Bot List -->
-<section class="bot-list">
-    <a class="bot-box" href="https://t.me/UploadXPro_Bot" target="_blank">@UploadXPro_Bot</a>
-    <a class="bot-box" href="#">@AmcGdriveBot</a>
-    <a class="bot-box" href="#">@Files2LinkProBot</a>
-</section>
-
-<script>
-function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle("active");
-}
-</script>
-
 {% endblock %}
